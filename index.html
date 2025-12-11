@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lumen Studio – Contemporary Lighting</title>
+
+    <!-- Google Fonts - Playfair Display (serif) + Inter (sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- model-viewer for 3D models -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar">
+        <a href="#top" class="logo">Lumen Studio</a>
+        <div class="nav-menu">
+          <a href="#products">Collection</a>
+          <a href="#product-detail">Experience</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-wrapper">
+          <div class="hero-left">
+            <h1 class="hero-title">
+              Light Shapes<br />
+              Your Space
+            </h1>
+            <p class="hero-text">
+              Discover how intelligent lighting transforms the ambiance of your
+              home. Experience our curated collection of contemporary lamps with
+              customizable warmth.
+            </p>
+            <a href="#products" class="hero-cta">Explore Collection</a>
+          </div>
+          <div class="hero-right">
+            <img
+              src="assets/room-1-3.png"
+              alt="Contemporary living space"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Collection Section -->
+      <section id="products" class="collection">
+        <div class="collection-header">
+          <h2 class="section-title">Collection</h2>
+          <p class="section-desc">
+            Explore each design in 3D. Click to preview in a real environment.
+          </p>
+        </div>
+
+        <div class="lamp-list">
+          <!-- Lamp 1 -->
+          <article class="lamp-item product-card" data-product="1">
+            <div class="lamp-visual">
+              <model-viewer
+                alt="Cozy warm lamp"
+                src="assets/1.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                touch-action="pan-y"
+              ></model-viewer>
+            </div>
+            <div class="lamp-details">
+              <h3>Cozy Warm Lamp</h3>
+              <p>Relaxed evenings</p>
+            </div>
+          </article>
+
+          <!-- Lamp 2 -->
+          <article class="lamp-item product-card" data-product="2">
+            <div class="lamp-visual">
+              <model-viewer
+                alt="Focused cool lamp"
+                src="assets/2.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                touch-action="pan-y"
+              ></model-viewer>
+            </div>
+            <div class="lamp-details">
+              <h3>Focused Cool Lamp</h3>
+              <p>Work and clarity</p>
+            </div>
+          </article>
+
+          <!-- Lamp 3 -->
+          <article class="lamp-item product-card" data-product="3">
+            <div class="lamp-visual">
+              <model-viewer
+                alt="Color mood lamp"
+                src="assets/3.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                touch-action="pan-y"
+              ></model-viewer>
+            </div>
+            <div class="lamp-details">
+              <h3>Color Mood Lamp</h3>
+              <p>Dynamic ambiance</p>
+            </div>
+          </article>
+
+          <!-- Lamp 4 -->
+          <article class="lamp-item product-card" data-product="4">
+            <div class="lamp-visual">
+              <model-viewer
+                alt="Minimal desk lamp"
+                src="assets/4.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                touch-action="pan-y"
+              ></model-viewer>
+            </div>
+            <div class="lamp-details">
+              <h3>Minimal Desk Lamp</h3>
+              <p>Clean and precise</p>
+            </div>
+          </article>
+
+          <!-- Lamp 5 -->
+          <article class="lamp-item product-card" data-product="5">
+            <div class="lamp-visual">
+              <model-viewer
+                alt="Ambient glow lamp"
+                src="assets/5.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                touch-action="pan-y"
+              ></model-viewer>
+            </div>
+            <div class="lamp-details">
+              <h3>Ambient Glow Lamp</h3>
+              <p>Soft illumination</p>
+            </div>
+          </article>
+
+          <!-- Lamp 6 -->
+          <article class="lamp-item product-card" data-product="6">
+            <div class="lamp-visual">
+              <model-viewer
+                alt="Studio task lamp"
+                src="assets/6.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                touch-action="pan-y"
+              ></model-viewer>
+            </div>
+            <div class="lamp-details">
+              <h3>Studio Task Lamp</h3>
+              <p>Professional grade</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="product-detail" class="experience">
+        <div class="experience-wrapper">
+          <div class="experience-content">
+            <div class="experience-header">
+              <h2 class="section-title">Experience</h2>
+              <button type="button" id="back-to-lamps" class="back-link">
+                ← Collection
+              </button>
+            </div>
+
+            <p class="experience-intro">
+              See how your selected lamp transforms a living space. Adjust the
+              temperature from warm to cool—exactly as you would in your home.
+            </p>
+
+            <div class="controls-box">
+              <label for="temp-slider" class="control-title">
+                Color Temperature
+              </label>
+
+              <div class="slider-wrapper">
+                <div class="slider-range">
+                  <span>Warm</span>
+                  <span>Cool</span>
+                </div>
+                <input
+                  id="temp-slider"
+                  type="range"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="2"
+                />
+              </div>
+
+              <p class="current-setting">
+                <span id="temp-label">Warm</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-visual">
+            <img
+              id="detail-image"
+              src="assets/room-1-2.png"
+              alt="Lamp in living room"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="about-wrapper">
+          <h2 class="section-title">About</h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                Lumen Studio explores the intersection of light, space, and
+                digital craft. We believe lighting is not merely functional—it
+                is an essential element of how you experience your home.
+              </p>
+            </div>
+            <div class="about-text">
+              <p>
+                This interactive experience combines AI-assisted 3D rendering
+                with real-time controls. Each visualization is rendered from the
+                same scene with five distinct presets, letting you preview
+                exactly how temperature affects atmosphere.
+              </p>
+            </div>
+          </div>
+          <div class="about-credit">
+            <p>A prototype for MMDD 226 — 2025</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Lumen Studio</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
